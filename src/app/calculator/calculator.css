@@ -1,0 +1,18 @@
+mat-form-field {
+  width: 100%;
+  padding: 1.5em 0 1.5em 0;
+}
+
+.centered {
+  height: 100%;
+  text-align: center;
+  align-content: center;
+}
+
+.highlighted-cell {
+  border: solid red;
+}
+
+.right-panel {
+  overflow-x: auto;
+}

@@ -1,0 +1,140 @@
+<div style="display: flex; flex-direction: column; height: 100%">
+  <h3>Калькулятор для настольной игры "<a href="https://boardgamegeek.com/boardgame/2998/reds-the-russian-civil-war-1918-1921">Красные!</a>"</h3>
+  <as-split direction="horizontal">
+    <as-split-area>
+      <button matButton="filled" (click)="resetAllValues()">Сброс</button>
+
+      <form [formGroup]="calculatorGroup" style="width: 100%">
+        <mat-form-field>
+          <mat-label><mat-icon fontSet="material-symbols-outlined">swords</mat-icon>Численность атакующих войск</mat-label>
+          <input matInput type="number" formControlName="attackManpower" min="0" required/>
+          <mat-hint>Число на фишке слева от изображение юнита</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label><mat-icon fontSet="material-symbols-outlined">shield</mat-icon>Численность обороняющихся войск</mat-label>
+          <input matInput type="number" formControlName="defenseManpower" min="0" required/>
+          <mat-hint>Число на фишке слева от изображение юнита</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label><mat-icon fontSet="material-symbols-outlined">swords</mat-icon>Количество соединений атакующего</mat-label>
+          <input matInput type="number" formControlName="attackUnitsCount" min="0" required/>
+          <mat-hint>Количество фишек на гексе</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label><mat-icon fontSet="material-symbols-outlined">shield</mat-icon>Количество соединений обороняющегося</mat-label>
+          <input matInput type="number" formControlName="defenseUnitsCount" min="0" required/>
+          <mat-hint>Количество фишек на гексе</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label><mat-icon fontSet="material-symbols-outlined">swords</mat-icon>Модификатор атакующего</mat-label>
+          <input matInput type="number" formControlName="attackModifier" required/>
+          <mat-hint>Сумма атак на фишках юнитов, первое число</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label><mat-icon fontSet="material-symbols-outlined">shield</mat-icon>Модификатор обороняющегося</mat-label>
+          <input matInput type="number" formControlName="defenseModifier" required/>
+          <mat-hint>Сумма защит на фишках юнитов, второе число</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label><mat-icon fontSet="material-symbols-outlined">swords</mat-icon>Бросок кубика атакующего</mat-label>
+          <input matInput type="number" min="1" max="6" formControlName="attackDiceRoll" required/>
+          <mat-hint>От 1 до 6</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label><mat-icon fontSet="material-symbols-outlined">shield</mat-icon>Бросок кубика обороняющегося</mat-label>
+          <input matInput type="number" min="1" max="6" formControlName="defenseDiceRoll" required/>
+          <mat-hint>От 1 до 6</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label><mat-icon fontSet="material-symbols-outlined">shield</mat-icon>Обороняющиеся находятся...</mat-label>
+          <mat-select required formControlName="defenseLocation">
+            @for (location of locations; track $index) {
+              <mat-option [value]="location.value">{{location.view}}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </form>
+
+      <button matButton="filled" (click)="resetAllValues()">Сброс</button>
+    </as-split-area>
+    <as-split-area class="right-panel">
+      @if (noCalculationMessage != null) {
+        <div class="centered">
+          {{noCalculationMessage}}
+        </div>
+      }
+      @else {
+        <table mat-table [dataSource]="oddsTable">
+          <ng-container matColumnDef="combatDifferential">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+              @if(element.combatDifferentialRange.from == element.combatDifferentialRange.to) {
+                {{element.combatDifferentialRange.from}}
+              }
+              @else {
+                @if(element.combatDifferentialRange.from != Number.NEGATIVE_INFINITY) {
+                  {{element.combatDifferentialRange.from > 0 ? '+' + element.combatDifferentialRange.from : element.combatDifferentialRange.from}}
+                }
+                @if(element.combatDifferentialRange.from != Number.NEGATIVE_INFINITY && element.combatDifferentialRange.to != Number.POSITIVE_INFINITY){
+                  to
+                }
+                @if(element.combatDifferentialRange.to != Number.POSITIVE_INFINITY) {
+                  {{element.combatDifferentialRange.to > 0 ? '+' + element.combatDifferentialRange.to : element.combatDifferentialRange.to}}
+                }
+              }
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="oneToThree">
+            <th mat-header-cell *matHeaderCellDef> 1-3 </th>
+            <td mat-cell *matCellDef="let element" [class.highlighted-cell]="element.oddsWithResult[0].highlightedInTable">{{flagsToNames(element.oddsWithResult[0].result).join("")}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="oneToTwo">
+            <th mat-header-cell *matHeaderCellDef> 1-2 </th>
+            <td mat-cell *matCellDef="let element" [class.highlighted-cell]="element.oddsWithResult[1].highlightedInTable">{{flagsToNames(element.oddsWithResult[1].result).join("")}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="oneToOne">
+            <th mat-header-cell *matHeaderCellDef> 1-1 </th>
+            <td mat-cell *matCellDef="let element" [class.highlighted-cell]="element.oddsWithResult[2].highlightedInTable">{{flagsToNames(element.oddsWithResult[2].result).join("")}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="twoToOne">
+            <th mat-header-cell *matHeaderCellDef> 2-1 </th>
+            <td mat-cell *matCellDef="let element" [class.highlighted-cell]="element.oddsWithResult[3].highlightedInTable">{{flagsToNames(element.oddsWithResult[3].result).join("")}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="threeToOne">
+            <th mat-header-cell *matHeaderCellDef> 3-1 </th>
+            <td mat-cell *matCellDef="let element" [class.highlighted-cell]="element.oddsWithResult[4].highlightedInTable">{{flagsToNames(element.oddsWithResult[4].result).join("")}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="fourToOne">
+            <th mat-header-cell *matHeaderCellDef> 4-1 </th>
+            <td mat-cell *matCellDef="let element" [class.highlighted-cell]="element.oddsWithResult[5].highlightedInTable">{{flagsToNames(element.oddsWithResult[5].result).join("")}}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+          <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+        </table>
+
+        <h3>Действия:</h3>
+        <ul>
+          @for (action of currentActionsDescriptions; track $index){
+            <li>{{action}}</li>
+          }
+        </ul>
+      }
+    </as-split-area>
+  </as-split>
+
+</div>
