@@ -44,6 +44,11 @@ enum Location {
   City = 32,
 }
 
+enum CalculatorStates {
+  WaitingForCalculation,
+  CantFightInDeserts
+}
+
 class CombatResultsWithOdds {
   combatDifferentialRange: { from: number, to: number }
   oddsWithResult: OddsWithResult[]
@@ -100,12 +105,12 @@ const flagsToNames = (flags: number) =>
 })
 export class Calculator implements OnInit {
   locations = [
-    {view: "В другом поле (не перечислено тут)", value: Location.Clear},
-    {view: "В горах", value: Location.Mountain},
-    {view: "В пустынях", value: Location.Desert},
-    {view: "На реке", value: Location.River},
-    {view: "На Волге", value: Location.Volga},
-    {view: "В городе", value: Location.City},
+    {view: $localize`В другом поле (не перечислено тут)`, value: Location.Clear},
+    {view: $localize`В горах`, value: Location.Mountain},
+    {view: $localize`В пустынях`, value: Location.Desert},
+    {view: $localize`На реке`, value: Location.River},
+    {view: $localize`На Волге`, value: Location.Volga},
+    {view: $localize`В городе`, value: Location.City},
   ];
 
   oddsTable: CombatResultsWithOdds[] = [
@@ -190,7 +195,7 @@ export class Calculator implements OnInit {
   combatDifferential: number | null = null;
   currentActionsDescriptions: string[] = [];
 
-  noCalculationMessage: "Ждём расчёта..." | "В пустынях нельзя сражаться" | null = "Ждём расчёта...";
+  noCalculationMessage: CalculatorStates | null = CalculatorStates.WaitingForCalculation;
   columnsToDisplay = ['combatDifferential', 'oneToThree', 'oneToTwo', 'oneToOne', 'twoToOne', 'threeToOne', 'fourToOne'];
 
   ngOnInit(): void {
@@ -214,7 +219,7 @@ export class Calculator implements OnInit {
       }
       if ((defenseLocationsValue & Location.Desert) === Location.Desert) {
         // В пустынях нельзя сражаться, даже если все остальные данные в форме правильные, см. памятку локаций
-        this.noCalculationMessage = "В пустынях нельзя сражаться";
+        this.noCalculationMessage = CalculatorStates.CantFightInDeserts;
         return;
       }
     }
@@ -245,20 +250,20 @@ export class Calculator implements OnInit {
       this.oddsTable.forEach(x => x.oddsWithResult.forEach(y => y.highlightedInTable = false));
       let currentCombatOdds = this.oddsTable.find(x => x.combatDifferentialRange.from <= this.combatDifferential! && x.combatDifferentialRange.to >= this.combatDifferential!);
       if (currentCombatOdds == null) {
-        this.noCalculationMessage = "Ждём расчёта...";
+        this.noCalculationMessage = CalculatorStates.WaitingForCalculation;
         return;
       }
 
       let currentResult = currentCombatOdds.oddsWithResult.find(x => x.odds == this.combatOdds);
       if (currentResult == null) {
-        this.noCalculationMessage = "Ждём расчёта...";
+        this.noCalculationMessage = CalculatorStates.WaitingForCalculation;
         return;
       }
       currentResult.highlightedInTable = true;
 
       this.currentActionsDescriptions = this.getActionsDescriptions(currentResult.result);
     } else {
-      this.noCalculationMessage = "Ждём расчёта...";
+      this.noCalculationMessage = CalculatorStates.WaitingForCalculation;
     }
   }
 
@@ -291,11 +296,11 @@ export class Calculator implements OnInit {
   private getActionsDescriptions(currentActions: CombatResults): string[] {
     let currentActionsDescriptions: string[] = [];
 
-    if ((currentActions & CombatResults.a) === CombatResults.a) currentActionsDescriptions.push('а - наибольшее по численности соединение атакующего становится дезорганизованным.');
-    if ((currentActions & CombatResults.A) === CombatResults.A) currentActionsDescriptions.push('А - все соединения атакующего становятся дезорганизованными.');
-    if ((currentActions & CombatResults.d) === CombatResults.d) currentActionsDescriptions.push('о - наибольшее по численности соединение обороняющегося становится дезорганизованным. Если обороняющееся соединение было единственным сгруппированным с гарнизоном и в результате было уничтожено, уничтожьте также и гарнизон.');
-    if ((currentActions & CombatResults.D) === CombatResults.D) currentActionsDescriptions.push('О - все соединения атакующего становятся дезорганизованными. Если все соединения обороняющегося, сгруппированные с гарнизоном, были уничтожены, уничтожьте также и гарнизон.');
-    if ((currentActions & CombatResults.R) === CombatResults.R) currentActionsDescriptions.push('ОТ - все соединения (кроме гарнизонов) отступают на 2 гекса. Гарнизоны уничтожаются. Этот результат относится к той стороне, чья буква указана перед ним.');
+    if ((currentActions & CombatResults.a) === CombatResults.a) currentActionsDescriptions.push($localize`а - наибольшее по численности соединение атакующего становится дезорганизованным.`);
+    if ((currentActions & CombatResults.A) === CombatResults.A) currentActionsDescriptions.push($localize`А - все соединения атакующего становятся дезорганизованными.`);
+    if ((currentActions & CombatResults.d) === CombatResults.d) currentActionsDescriptions.push($localize`о - наибольшее по численности соединение обороняющегося становится дезорганизованным. Если обороняющееся соединение было единственным сгруппированным с гарнизоном и в результате было уничтожено, уничтожьте также и гарнизон.`);
+    if ((currentActions & CombatResults.D) === CombatResults.D) currentActionsDescriptions.push($localize`О - все соединения атакующего становятся дезорганизованными. Если все соединения обороняющегося, сгруппированные с гарнизоном, были уничтожены, уничтожьте также и гарнизон.`);
+    if ((currentActions & CombatResults.R) === CombatResults.R) currentActionsDescriptions.push($localize`ОТ - все соединения (кроме гарнизонов) отступают на 2 гекса. Гарнизоны уничтожаются. Этот результат относится к той стороне, чья буква указана перед ним.`);
 
     return currentActionsDescriptions;
   }
@@ -327,4 +332,5 @@ export class Calculator implements OnInit {
 
   protected readonly Number = Number;
   protected readonly flagsToNames = flagsToNames;
+  protected readonly CalculatorStates = CalculatorStates;
 }

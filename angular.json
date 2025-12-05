@@ -28,7 +28,11 @@
             "styles": [
               "src/custom-theme.scss",
               "src/styles.css"
-            ]
+            ],
+            "polyfills": [
+              "@angular/localize/init"
+            ],
+            "localize": true
           },
           "configurations": {
             "production": {
@@ -50,6 +54,11 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "en-US": {
+              "localize": [
+                "en-US"
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -62,12 +71,23 @@
             },
             "development": {
               "buildTarget": "RedsCalculator:build:development"
+            },
+            "en-US": {
+              "buildTarget": "RedsCalculator:build:development,en-US"
             }
           },
           "defaultConfiguration": "development"
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        }
+      },
+      "i18n": {
+        "sourceLocale": "ru",
+        "locales": {
+          "en-US": {
+            "translation": "locale/messages.en-US.xlf"
+          }
         }
       }
     }
