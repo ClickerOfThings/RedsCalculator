@@ -53,14 +53,14 @@
           <mat-hint>От 1 до 6</mat-hint>
         </mat-form-field>
 
-        <mat-form-field>
-          <mat-label><mat-icon fontSet="material-symbols-outlined">shield</mat-icon>Обороняющиеся находятся...</mat-label>
-          <mat-select required formControlName="defenseLocation">
-            @for (location of locations; track $index) {
-              <mat-option [value]="location.value">{{location.view}}</mat-option>
-            }
-          </mat-select>
-        </mat-form-field>
+        <mat-label><mat-icon fontSet="material-symbols-outlined">shield</mat-icon>Обороняющиеся находятся...</mat-label>
+        <div>
+          @for (location of locations; track $index) {
+            <mat-checkbox [checked]="isLocationChecked(location.value)"
+                          (change)="toggleLocationFlag(location.value)"
+                          [disabled]="isLocationDisabled(location.value)">{{location.view}}</mat-checkbox>
+          }
+        </div>
       </form>
 
       <button matButton="filled" (click)="resetAllValues()">Сброс</button>

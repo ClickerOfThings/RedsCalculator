@@ -1,19 +1,22 @@
-import {Component, OnInit} from '@angular/core';
-import {MatFormField, MatHint, MatInput, MatLabel} from '@angular/material/input';
-import {MatIcon} from '@angular/material/icon';
-import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
-import {SplitAreaComponent, SplitComponent} from 'angular-split';
-import {MatOption, MatSelect} from '@angular/material/select';
+import { Component, OnInit } from '@angular/core';
+import { MatFormField, MatHint, MatInput, MatInputModule, MatLabel } from '@angular/material/input';
+import { MatIcon } from '@angular/material/icon';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { SplitAreaComponent, SplitComponent } from 'angular-split';
 import {
   MatCell,
   MatCellDef,
   MatColumnDef,
   MatHeaderCell,
   MatHeaderCellDef,
-  MatHeaderRowDef, MatRowDef,
-  MatTable, MatTableModule
+  MatHeaderRowDef,
+  MatRowDef,
+  MatTable,
+  MatTableModule
 } from '@angular/material/table';
-import {MatButton} from '@angular/material/button';
+import { MatButton } from '@angular/material/button';
+import { MatCheckbox } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 enum CombatOdds {
   OneToThree,
@@ -33,12 +36,12 @@ enum CombatResults {
 }
 
 enum Location {
-  Clear,
-  Mountain,
-  Desert,
-  River,
-  Volga,
-  City,
+  Clear = 1,
+  Mountain = 2,
+  Desert = 4,
+  River = 8,
+  Volga = 16,
+  City = 32,
 }
 
 class CombatResultsWithOdds {
@@ -73,13 +76,13 @@ const flagsToNames = (flags: number) =>
     MatLabel,
     MatInput,
     MatFormField,
+    MatFormFieldModule,
+    MatInputModule,
     MatIcon,
     MatHint,
     ReactiveFormsModule,
     SplitComponent,
     SplitAreaComponent,
-    MatSelect,
-    MatOption,
     MatTable,
     MatTableModule,
     MatColumnDef,
@@ -89,7 +92,8 @@ const flagsToNames = (flags: number) =>
     MatCellDef,
     MatHeaderRowDef,
     MatRowDef,
-    MatButton
+    MatButton,
+    MatCheckbox
   ],
   templateUrl: './calculator.html',
   styleUrl: './calculator.css',
@@ -102,7 +106,7 @@ export class Calculator implements OnInit {
     {view: "На реке", value: Location.River},
     {view: "На Волге", value: Location.Volga},
     {view: "В городе", value: Location.City},
-  ]
+  ];
 
   oddsTable: CombatResultsWithOdds[] = [
     new CombatResultsWithOdds({from: Number.NEGATIVE_INFINITY, to: -7},
@@ -179,7 +183,7 @@ export class Calculator implements OnInit {
     defenseModifier: new FormControl<number | null>(null),
     attackDiceRoll: new FormControl<number | null>(null),
     defenseDiceRoll: new FormControl<number | null>(null),
-    defenseLocation: new FormControl<Location | null>(null),
+    defenseLocations: new FormControl<Location | null>(null)
   });
 
   combatOdds: CombatOdds | null = null;
@@ -201,11 +205,18 @@ export class Calculator implements OnInit {
   }
 
   calculatorValueChanges() {
-    let defenseLocation = this.calculatorGroup.get("defenseLocation")?.value;
-    if (defenseLocation != null && defenseLocation == Location.Desert) {
-      // В пустынях нельзя сражаться, даже если все остальные данные в форме правильные, см. памятку локаций
-      this.noCalculationMessage = "В пустынях нельзя сражаться";
-      return;
+    let defenseLocationsControl = this.calculatorGroup.controls.defenseLocations;
+    let defenseLocationsValue = defenseLocationsControl.value;
+
+    if (defenseLocationsValue != null) {
+      if ((defenseLocationsValue & Location.Clear) === Location.Clear && defenseLocationsValue != Location.Clear) {
+        this.calculatorGroup.controls.defenseLocations.setValue(Location.Clear);
+      }
+      if ((defenseLocationsValue & Location.Desert) === Location.Desert) {
+        // В пустынях нельзя сражаться, даже если все остальные данные в форме правильные, см. памятку локаций
+        this.noCalculationMessage = "В пустынях нельзя сражаться";
+        return;
+      }
     }
 
     if (this.calculatorGroup.valid) {
@@ -215,7 +226,7 @@ export class Calculator implements OnInit {
       let defenseManpower = this.calculatorGroup.get("defenseManpower")!.value!;
 
       let manpowerDifference = attackManpower / defenseManpower;
-      let defenseLocation = this.calculatorGroup.get("defenseLocation")?.value;
+      let defenseLocation = this.calculatorGroup.get("defenseLocations")?.value;
       this.combatOdds = this.getCombatOdds(manpowerDifference, defenseLocation);
 
       let attackUnitsCount = this.calculatorGroup.get("attackUnitsCount")!.value!;
@@ -268,7 +279,8 @@ export class Calculator implements OnInit {
       combatOdds = CombatOdds.FourToOne;
 
     if (defenseLocation != null && defenseLocation != Location.Clear) {
-      combatOdds -= 1;
+      let flagsCount = this.countFlags(defenseLocation);
+      combatOdds -= flagsCount;
       if (combatOdds < 0)
         combatOdds = 0;
     }
@@ -287,6 +299,31 @@ export class Calculator implements OnInit {
 
     return currentActionsDescriptions;
   }
+
+  toggleLocationFlag(flag: Location, emitEvent: boolean = true) {
+    const value: number = this.calculatorGroup.controls.defenseLocations.value ?? 0;
+    const newValue = (value & flag) ? (value & ~flag) : (value | flag);
+    this.calculatorGroup.controls.defenseLocations.setValue(newValue, { emitEvent: emitEvent });
+  }
+
+  isLocationChecked(flag: Location) {
+    return ((this.calculatorGroup.controls.defenseLocations.value ?? 0) & flag) === flag;
+  }
+
+  isLocationDisabled(flag: Location) {
+    return flag !== Location.Clear && (this.calculatorGroup.controls.defenseLocations.value ?? 0 & Location.Clear) === Location.Clear;
+  }
+
+  countFlags(value: number): number {
+    let v = value >>> 0;
+    let count = 0;
+    while (v) {
+      v &= v - 1;
+      count++;
+    }
+    return count;
+  }
+
 
   protected readonly Number = Number;
   protected readonly flagsToNames = flagsToNames;
