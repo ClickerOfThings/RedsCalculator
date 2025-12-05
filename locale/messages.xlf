@@ -3,152 +3,153 @@
   <file source-language="ru" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="4608287027729995305" datatype="html">
-        <source>Калькулятор для настольной игры &quot;<x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://boardgamegeek.com/boardgame/2998/reds-the-russian-civil-war-1918-1921&quot;&gt;"/>Красные!<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>&quot;</source>
+        <source>Калькулятор для настольной игры &quot;<x id="START_LINK" ctype="x-a" equiv-text="&lt;a
+      href=&quot;https://boardgamegeek.com/boardgame/2998/reds-the-russian-civil-war-1918-1921&quot;&gt;"/>Красные!<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>&quot;</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">2,3</context>
+          <context context-type="linenumber">3,5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="556443939597282776" datatype="html">
         <source>Сброс</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">5,7</context>
+          <context context-type="linenumber">9,11</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">66,67</context>
+          <context context-type="linenumber">97,98</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="963523679278048972" datatype="html">
-        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>swords<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>Численность атакующих войск</source>
+      <trans-unit id="1122604434487714354" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>swords<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Численность атакующих войск </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">9,10</context>
+          <context context-type="linenumber">14,16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8333892759379658315" datatype="html">
         <source>Число на фишке слева от изображение юнита</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">18</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4468138668118898002" datatype="html">
-        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>shield<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>Численность обороняющихся войск</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">15,16</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="9111646465531742233" datatype="html">
-        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>swords<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>Количество соединений атакующего</source>
+      <trans-unit id="1053782352210861764" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>shield<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Численность обороняющихся войск </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">21,22</context>
+          <context context-type="linenumber">23,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6817017350485900370" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>swords<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Количество соединений атакующего </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/calculator/calculator.html</context>
+          <context context-type="linenumber">32,34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4731550552903979370" datatype="html">
         <source>Количество фишек на гексе</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">36</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3437063864763541912" datatype="html">
-        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>shield<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>Количество соединений обороняющегося</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">27,28</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1779488300553687769" datatype="html">
-        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>swords<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>Модификатор атакующего</source>
+      <trans-unit id="8160819931682411361" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>shield<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Количество соединений обороняющегося </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">33,34</context>
+          <context context-type="linenumber">41,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1808446039354124841" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>swords<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Модификатор атакующего </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/calculator/calculator.html</context>
+          <context context-type="linenumber">50,52</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4208122116592453094" datatype="html">
         <source>Сумма атак на фишках юнитов, первое число</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6436171084152943160" datatype="html">
-        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>shield<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>Модификатор обороняющегося</source>
+      <trans-unit id="4264425783001975632" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>shield<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Модификатор обороняющегося </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">39,40</context>
+          <context context-type="linenumber">59,61</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3299630073905360575" datatype="html">
         <source>Сумма защит на фишках юнитов, второе число</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="489500887725929788" datatype="html">
-        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>swords<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>Бросок кубика атакующего</source>
+      <trans-unit id="1147594849443222412" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>swords<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Бросок кубика атакующего </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">45,46</context>
+          <context context-type="linenumber">68,70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2667480530565805206" datatype="html">
         <source>От 1 до 6</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">47</context>
+          <context context-type="linenumber">72</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">53</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="452309311479693071" datatype="html">
-        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>shield<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>Бросок кубика обороняющегося</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">51,52</context>
+          <context context-type="linenumber">81</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7669188851156493960" datatype="html">
-        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>shield<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/>Обороняющиеся находятся...</source>
+      <trans-unit id="3675765298019224139" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>shield<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Бросок кубика обороняющегося </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">56,57</context>
+          <context context-type="linenumber">77,79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6178607232346126556" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;&gt;"/>shield<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Обороняющиеся находятся... </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/calculator/calculator.html</context>
+          <context context-type="linenumber">85,87</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3784580594441604741" datatype="html">
         <source>Ждём расчёта...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">74,75</context>
+          <context context-type="linenumber">104,105</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3530790374659611270" datatype="html">
         <source>В пустынях нельзя сражаться</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">78,79</context>
+          <context context-type="linenumber">107,108</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6145517653282788381" datatype="html">
         <source>Действия:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">139,140</context>
+          <context context-type="linenumber">168,169</context>
         </context-group>
       </trans-unit>
       <trans-unit id="303209846772701573" datatype="html">

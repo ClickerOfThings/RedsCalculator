@@ -1,265 +1,264 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file datatype="plaintext" original="ng2.template" source-language="ru" target-language="en-US">
+  <file datatype="plaintext" original="ng2.template" source-language="ru" target-language="ru-RU">
     <header>
       <phase-group>
-        <phase contact-email="" contact-name="user" date="2025-12-05" phase-name="approval-1" process-name="approval" tool-id="lokalize-25.08.3"/>
+        <phase contact-email="clickerofthings@protonmail.com" contact-name="user" date="2025-12-05" phase-name="approval-1" process-name="approval" tool-id="lokalize-25.08.3"/>
       </phase-group>
       <tool tool-id="lokalize-25.08.3" tool-name="Lokalize" tool-version="25.08.3"/>
     </header>
     <body>
-      <trans-unit approved="yes" datatype="html" id="4608287027729995305">
-        <source>Калькулятор для настольной игры "<x ctype="x-a" equiv-text="&lt;a href=&quot;https://boardgamegeek.com/boardgame/2998/reds-the-russian-civil-war-1918-1921&quot;>" id="START_LINK"/>Красные!<x ctype="x-a" equiv-text="&lt;/a>" id="CLOSE_LINK"/>"</source>
-        <target phase-name="approval-1" state="signed-off">"<x id="START_LINK"/>Reds!<x id="CLOSE_LINK"/>" board game calculator</target>
+      <trans-unit approved="no" datatype="html" id="4608287027729995305">
+        <source>Калькулятор для настольной игры "<x ctype="x-a" equiv-text="&lt;a       href=&quot;https://boardgamegeek.com/boardgame/2998/reds-the-russian-civil-war-1918-1921&quot;>" id="START_LINK"/>Красные!<x ctype="x-a" equiv-text="&lt;/a>" id="CLOSE_LINK"/>"</source>
+        <target phase-name="approval-1" state="new">"<x id="START_LINK"/>Reds!<x id="CLOSE_LINK"/>" board game calculator</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">2,3</context>
+          <context context-type="linenumber">3,5</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="556443939597282776">
+      <trans-unit datatype="html" id="556443939597282776">
         <source>Сброс</source>
-        <target phase-name="approval-1" state="signed-off">Reset</target>
+        <target phase-name="approval-1" state="new">Reset</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">5,7</context>
+          <context context-type="linenumber">9,11</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">66,67</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="963523679278048972">
-        <source>
-          <x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>swords<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/>Численность атакующих войск</source>
-        <target phase-name="approval-1" state="signed-off"><x id="START_TAG_MAT_ICON"/>swords<x id="CLOSE_TAG_MAT_ICON"/>Attack manpower</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">9,10</context>
+          <context context-type="linenumber">97,98</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="8333892759379658315">
+      <trans-unit datatype="html" id="1122604434487714354">
+        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>swords<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/> Численность атакующих войск </source>
+        <target phase-name="approval-1" state="new"><x id="START_TAG_MAT_ICON"/>swords<x id="CLOSE_TAG_MAT_ICON"/>Attack manpower</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/calculator/calculator.html</context>
+          <context context-type="linenumber">14,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="8333892759379658315">
         <source>Число на фишке слева от изображение юнита</source>
-        <target phase-name="approval-1" state="signed-off">Number on the piece to the left of the unit flag</target>
+        <target phase-name="approval-1" state="new">Number on the piece to the left of the unit flag</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">18</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="4468138668118898002">
-        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>shield<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/>Численность обороняющихся войск</source>
-        <target phase-name="approval-1" state="signed-off"><x id="START_TAG_MAT_ICON"/>shield<x id="CLOSE_TAG_MAT_ICON"/>Defense manpower</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">15,16</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="9111646465531742233">
-        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>swords<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/>Количество соединений атакующего</source>
-        <target phase-name="approval-1" state="signed-off"><x id="START_TAG_MAT_ICON"/>swords<x id="CLOSE_TAG_MAT_ICON"/>Defense units count</target>
+      <trans-unit datatype="html" id="1053782352210861764">
+        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>shield<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/> Численность обороняющихся войск </source>
+        <target phase-name="approval-1" state="new"><x id="START_TAG_MAT_ICON"/>shield<x id="CLOSE_TAG_MAT_ICON"/>Defense manpower</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">21,22</context>
+          <context context-type="linenumber">23,25</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="4731550552903979370">
+      <trans-unit datatype="html" id="6817017350485900370">
+        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>swords<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/> Количество соединений атакующего </source>
+        <target phase-name="approval-1" state="new"><x id="START_TAG_MAT_ICON"/>swords<x id="CLOSE_TAG_MAT_ICON"/>Defense units count</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/calculator/calculator.html</context>
+          <context context-type="linenumber">32,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="4731550552903979370">
         <source>Количество фишек на гексе</source>
-        <target phase-name="approval-1" state="signed-off">Tokens count on the hex</target>
+        <target phase-name="approval-1" state="new">Tokens count on the hex</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">36</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="3437063864763541912">
-        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>shield<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/>Количество соединений обороняющегося</source>
-        <target phase-name="approval-1" state="signed-off"><x id="START_TAG_MAT_ICON"/>shield<x id="CLOSE_TAG_MAT_ICON"/>Defense units count</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">27,28</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="1779488300553687769">
-        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>swords<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/>Модификатор атакующего</source>
-        <target phase-name="approval-1" state="signed-off"><x id="START_TAG_MAT_ICON"/>swords<x id="CLOSE_TAG_MAT_ICON"/>Attack modifier</target>
+      <trans-unit datatype="html" id="8160819931682411361">
+        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>shield<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/> Количество соединений обороняющегося </source>
+        <target phase-name="approval-1" state="new"><x id="START_TAG_MAT_ICON"/>shield<x id="CLOSE_TAG_MAT_ICON"/>Defense units count</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">33,34</context>
+          <context context-type="linenumber">41,43</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="4208122116592453094">
+      <trans-unit datatype="html" id="1808446039354124841">
+        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>swords<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/> Модификатор атакующего </source>
+        <target phase-name="approval-1" state="new"><x id="START_TAG_MAT_ICON"/>swords<x id="CLOSE_TAG_MAT_ICON"/>Attack modifier</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/calculator/calculator.html</context>
+          <context context-type="linenumber">50,52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="4208122116592453094">
         <source>Сумма атак на фишках юнитов, первое число</source>
-        <target phase-name="approval-1" state="signed-off">Sum of attack modifier on the units' pieces, the first number</target>
+        <target phase-name="approval-1" state="new">Sum of attack modifier on the units' pieces, the first number</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="6436171084152943160">
-        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>shield<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/>Модификатор обороняющегося</source>
-        <target phase-name="approval-1" state="signed-off"><x id="START_TAG_MAT_ICON"/>shield<x id="CLOSE_TAG_MAT_ICON"/>Defense modifier</target>
+      <trans-unit datatype="html" id="4264425783001975632">
+        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>shield<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/> Модификатор обороняющегося </source>
+        <target phase-name="approval-1" state="new"><x id="START_TAG_MAT_ICON"/>shield<x id="CLOSE_TAG_MAT_ICON"/>Defense modifier</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">39,40</context>
+          <context context-type="linenumber">59,61</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="3299630073905360575">
+      <trans-unit datatype="html" id="3299630073905360575">
         <source>Сумма защит на фишках юнитов, второе число</source>
-        <target phase-name="approval-1" state="signed-off">Sum of defense modifier on the units' pieces, the second number</target>
+        <target phase-name="approval-1" state="new">Sum of defense modifier on the units' pieces, the second number</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="489500887725929788">
-        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>swords<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/>Бросок кубика атакующего</source>
-        <target phase-name="approval-1" state="signed-off"><x id="START_TAG_MAT_ICON"/>swords<x id="CLOSE_TAG_MAT_ICON"/>Attack dice roll</target>
+      <trans-unit datatype="html" id="1147594849443222412">
+        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>swords<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/> Бросок кубика атакующего </source>
+        <target phase-name="approval-1" state="new"><x id="START_TAG_MAT_ICON"/>swords<x id="CLOSE_TAG_MAT_ICON"/>Attack dice roll</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">45,46</context>
+          <context context-type="linenumber">68,70</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="2667480530565805206">
+      <trans-unit datatype="html" id="2667480530565805206">
         <source>От 1 до 6</source>
-        <target phase-name="approval-1" state="signed-off">From 1 to 6</target>
+        <target phase-name="approval-1" state="new">From 1 to 6</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">47</context>
+          <context context-type="linenumber">72</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">53</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="452309311479693071">
-        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>shield<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/>Бросок кубика обороняющегося</source>
-        <target phase-name="approval-1" state="signed-off"><x id="START_TAG_MAT_ICON"/>shield<x id="CLOSE_TAG_MAT_ICON"/>Defense dice roll</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">51,52</context>
+          <context context-type="linenumber">81</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="7669188851156493960">
-        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>shield<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/>Обороняющиеся находятся...</source>
-        <target phase-name="approval-1" state="signed-off"><x id="START_TAG_MAT_ICON"/>shield<x id="CLOSE_TAG_MAT_ICON"/>Defense units are in the...</target>
+      <trans-unit datatype="html" id="3675765298019224139">
+        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>shield<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/> Бросок кубика обороняющегося </source>
+        <target phase-name="approval-1" state="new"><x id="START_TAG_MAT_ICON"/>shield<x id="CLOSE_TAG_MAT_ICON"/>Defense dice roll</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">56,57</context>
+          <context context-type="linenumber">77,79</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="3784580594441604741">
+      <trans-unit datatype="html" id="6178607232346126556">
+        <source><x ctype="x-mat_icon" equiv-text="&lt;mat-icon fontSet=&quot;material-symbols-outlined&quot;>" id="START_TAG_MAT_ICON"/>shield<x ctype="x-mat_icon" equiv-text="&lt;/mat-icon>" id="CLOSE_TAG_MAT_ICON"/> Обороняющиеся находятся... </source>
+        <target phase-name="approval-1" state="new"><x id="START_TAG_MAT_ICON"/>shield<x id="CLOSE_TAG_MAT_ICON"/>Defense units are in the...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/calculator/calculator.html</context>
+          <context context-type="linenumber">85,87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="3784580594441604741">
         <source>Ждём расчёта...</source>
-        <target phase-name="approval-1" state="signed-off">Waiting for calculation...</target>
+        <target phase-name="approval-1" state="new">Waiting for calculation...</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">74,75</context>
+          <context context-type="linenumber">104,105</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="3530790374659611270">
+      <trans-unit datatype="html" id="3530790374659611270">
         <source>В пустынях нельзя сражаться</source>
-        <target phase-name="approval-1" state="signed-off">You can't fight in the deserts</target>
+        <target phase-name="approval-1" state="new">You can't fight in the deserts</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">78,79</context>
+          <context context-type="linenumber">107,108</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="6145517653282788381">
+      <trans-unit datatype="html" id="6145517653282788381">
         <source>Действия:</source>
-        <target phase-name="approval-1" state="signed-off">Actions:</target>
+        <target phase-name="approval-1" state="new">Actions:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.html</context>
-          <context context-type="linenumber">139,140</context>
+          <context context-type="linenumber">168,169</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="303209846772701573">
+      <trans-unit datatype="html" id="303209846772701573">
         <source>В другом поле (не перечислено тут)</source>
-        <target phase-name="approval-1" state="signed-off">Other hex (not mentioned here)</target>
+        <target phase-name="approval-1" state="new">Other hex (not mentioned here)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.ts</context>
           <context context-type="linenumber">108</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="3284837495379752668">
+      <trans-unit datatype="html" id="3284837495379752668">
         <source>В горах</source>
-        <target phase-name="approval-1" state="signed-off">Mountains</target>
+        <target phase-name="approval-1" state="new">Mountains</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.ts</context>
           <context context-type="linenumber">109</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="2894363549631702467">
+      <trans-unit datatype="html" id="2894363549631702467">
         <source>В пустынях</source>
-        <target phase-name="approval-1" state="signed-off">Deserts</target>
+        <target phase-name="approval-1" state="new">Deserts</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.ts</context>
           <context context-type="linenumber">110</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="5282944755821016847">
+      <trans-unit datatype="html" id="5282944755821016847">
         <source>На реке</source>
-        <target phase-name="approval-1" state="signed-off">River</target>
+        <target phase-name="approval-1" state="new">River</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.ts</context>
           <context context-type="linenumber">111</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="8870566392887825646">
+      <trans-unit datatype="html" id="8870566392887825646">
         <source>На Волге</source>
-        <target phase-name="approval-1" state="signed-off">Volga river</target>
+        <target phase-name="approval-1" state="new">Volga river</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.ts</context>
           <context context-type="linenumber">112</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="636792120241388533">
+      <trans-unit datatype="html" id="636792120241388533">
         <source>В городе</source>
-        <target phase-name="approval-1" state="signed-off">City</target>
+        <target phase-name="approval-1" state="new">City</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.ts</context>
           <context context-type="linenumber">113</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="4116935090102772758">
+      <trans-unit datatype="html" id="4116935090102772758">
         <source>а - наибольшее по численности соединение атакующего становится дезорганизованным.</source>
-        <target phase-name="approval-1" state="signed-off">a - attacker's largest manpower non-garrison unit loses 1 step.</target>
+        <target phase-name="approval-1" state="new">a - attacker's largest manpower non-garrison unit loses 1 step.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.ts</context>
           <context context-type="linenumber">299</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="5129951018046531194">
+      <trans-unit datatype="html" id="5129951018046531194">
         <source>А - все соединения атакующего становятся дезорганизованными.</source>
-        <target phase-name="approval-1" state="signed-off">A - all attacking non-garrison units lose 1 step.</target>
+        <target phase-name="approval-1" state="new">A - all attacking non-garrison units lose 1 step.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.ts</context>
           <context context-type="linenumber">300</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="1107342762586817058">
+      <trans-unit datatype="html" id="1107342762586817058">
         <source>о - наибольшее по численности соединение обороняющегося становится дезорганизованным. Если обороняющееся соединение было единственным сгруппированным с гарнизоном и в результате было уничтожено, уничтожьте также и гарнизон.</source>
-        <target phase-name="approval-1" state="signed-off">d - defender's largest manpower non-garrison unit loses 1 step. If lone defending unit stacked with garrison eliminated, eliminate garrison.</target>
+        <target phase-name="approval-1" state="new">d - defender's largest manpower non-garrison unit loses 1 step. If lone defending unit stacked with garrison eliminated, eliminate garrison.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.ts</context>
           <context context-type="linenumber">301</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="3852348205202753990">
+      <trans-unit datatype="html" id="3852348205202753990">
         <source>О - все соединения атакующего становятся дезорганизованными. Если все соединения обороняющегося, сгруппированные с гарнизоном, были уничтожены, уничтожьте также и гарнизон.</source>
-        <target phase-name="approval-1" state="signed-off">D - all defending non-garrison units loses 1 step. If all defenders stacked with garrison eliminated, eliminate garrison.</target>
+        <target phase-name="approval-1" state="new">D - all defending non-garrison units loses 1 step. If all defenders stacked with garrison eliminated, eliminate garrison.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.ts</context>
           <context context-type="linenumber">302</context>
         </context-group>
       </trans-unit>
-      <trans-unit approved="yes" datatype="html" id="329947942556726427">
+      <trans-unit datatype="html" id="329947942556726427">
         <source>ОТ - все соединения (кроме гарнизонов) отступают на 2 гекса. Гарнизоны уничтожаются. Этот результат относится к той стороне, чья буква указана перед ним.</source>
-        <target phase-name="approval-1" state="signed-off">R - retreat all non-garrison units 2 hexes and eliminate garrisons. Affected side is determined by the previous letter.</target>
+        <target phase-name="approval-1" state="new">R - retreat all non-garrison units 2 hexes and eliminate garrisons. Affected side is determined by the previous letter.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calculator/calculator.ts</context>
           <context context-type="linenumber">303</context>
