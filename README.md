@@ -1,6 +1,8 @@
 # RedsCalculator
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.
+Калькулятор сражений для игры "[Красные!](https://boardgamegeek.com/boardgame/2998/reds-the-russian-civil-war-1918-1921)"
+
+Fight calculator for board game "[Reds!](https://boardgamegeek.com/boardgame/2998/reds-the-russian-civil-war-1918-1921)"
 
 ## Development server
 
@@ -57,3 +59,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## License
+
+This repository is licensed under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0)
